@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyFebApp</string>
+
+    <string name="myname"> ताजा खबरें </string>
 </resources>

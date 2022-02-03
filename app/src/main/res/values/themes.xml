@@ -13,4 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="mystyle" parent="Theme.MyFebApp">
+        <item name="android:textColor">#f00</item>
+        <item name="android:textSize">20dp</item>
+
+    </style>
 </resources>
