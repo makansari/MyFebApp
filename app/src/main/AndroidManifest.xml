@@ -9,25 +9,22 @@
         android:roundIcon="@drawable/abc"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFebApp">
-        <activity android:name=".ThirdActivity"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".SecondActivity">
-          </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/mystyle">
+        <activity android:name=".ActivityForService">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".SecondActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/mystyle"></activity>
     </application>
 
 </manifest>
