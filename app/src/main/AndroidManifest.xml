@@ -15,16 +15,19 @@
             android:exported="true"></service>
 
         <activity android:name=".ActivityForService">
+
+        </activity>
+        <activity android:name=".SecondActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/mystyle">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/mystyle"></activity>
     </application>
 
 </manifest>

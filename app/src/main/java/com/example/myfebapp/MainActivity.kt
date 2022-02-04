@@ -1,11 +1,13 @@
 package com.example.myfebapp
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,22 +18,29 @@ class MainActivity : AppCompatActivity() {
         Log.e("mytag","activity created and data is $a")
 
         buttonSubmit.setOnClickListener {
-           /*var un = editTextUsername.text.toString()
+           var un =  editTextUsername.text.toString()
 
-            Toast.makeText(this, "username is $un", Toast.LENGTH_LONG).show()
-
-            textViewUsername.setText(un)*/
-
-            // Explicit Intent
-            /*var i = Intent(this, ThirdActivity::class.java)
-            startActivity(i)*/
-
-            // Implicit Intent
-//            var i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9888582252"))
-//            startActivity(i)
-
-            var i = Intent(Intent.ACTION_VIEW, Uri.parse("http:www.ndtv.com"))
+            var i = Intent(this, SecondActivity::class.java)
+            i.putExtra("keyun",un)
             startActivity(i)
+        }
+
+        imageViewBox.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setTitle("MY TITLE")
+            builder.setMessage("Do you want to Exit the Screen")
+
+            builder.setPositiveButton("NO", DialogInterface.OnClickListener { dialogInterface, i ->
+
+                Toast.makeText(this, "want to continue", Toast.LENGTH_SHORT).show()
+            })
+
+            builder.setNegativeButton("YES", DialogInterface.OnClickListener { dialogInterface, i ->
+                this.finish()
+            })
+
+            var alertDialog = builder.create()
+            alertDialog.show()
         }
 
     }
