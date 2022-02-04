@@ -31,7 +31,7 @@ class ActivityForService : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var myid = item.itemId
-
+   
         if(myid == R.id.myact){
             var i = Intent(this, SecondActivity::class.java)
             startActivity(i)
